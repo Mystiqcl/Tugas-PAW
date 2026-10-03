@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #7b1d2e;
+  --accent: #b0863f;
+  --bg: #f8f9fa;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-header {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 1.2rem 2rem;
+}
+
+.header-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.brand span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.main-nav a {
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.2rem;
+}
+
+.hero {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 650px;
+}
+
+.search-bar {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 240px;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+}
+
+.genre-tag {
+  padding: 0.4rem 0.9rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.genre-tag:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.catalog-grid {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 2rem 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.book-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.kategori {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: #fdf2f4;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.book-card h2 {
+  font-size: 1.25rem;
+  margin-top: 0.2rem;
+}
+
+.penulis {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.meta {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+
+.lihat-detail {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  border-top: 1px solid var(--border);
+}
+
+.lihat-detail:hover {
+  color: var(--accent);
+}
+
+.detail-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 3.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.detail-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cover-block {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+  min-height: 290px;
+}
+
+.detail-info h1 {
+  font-size: 1.8rem;
+  margin-top: 0.4rem;
+}
+
+.spec-table {
+  width: 100%;
+  margin: 1.2rem 0;
+  border-collapse: collapse;
+}
+
+.spec-table tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.spec-table th,
+.spec-table td {
+  padding: 0.65rem 0;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.spec-table th {
+  width: 35%;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.status-tersedia {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.deskripsi {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.site-footer {
+  background-color: #56121e;
+  color: #e5e7eb;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}
+
+.footer-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-inner strong {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .header-inner,
+  .detail-card,
+  .footer-inner {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cover-block {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+}
